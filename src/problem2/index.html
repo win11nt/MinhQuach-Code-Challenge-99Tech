@@ -1,0 +1,55 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currency Swap</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="flex items-center justify-center min-h-screen text-white">
+  <div class="glass p-8 rounded-2xl w-full max-w-md shadow-2xl">
+    <h2 class="text-2xl font-bold mb-6 text-center">Swap Tokens</h2>
+
+    <!-- SEND -->
+    <div class="mb-4">
+      <label class="text-sm text-gray-400">You Send</label>
+      <div class="flex gap-2 mt-2">
+        <input id="amountFrom" type="text" inputmode="decimal" placeholder="0.0"
+          class="flex-1 p-3 rounded-xl bg-gray-800 outline-none" />
+        <select id="tokenFrom" class="p-3 bg-gray-800 rounded-xl"></select>
+      </div>
+    </div>
+
+    <!-- SWITCH BUTTON -->
+    <div class="flex justify-center my-4">
+      <button id="swapBtn" class="bg-indigo-500 px-4 py-2 rounded-full hover:bg-indigo-600 transition">
+        ⇅
+      </button>
+    </div>
+
+    <!-- RECEIVE -->
+    <div class="mb-4">
+      <label class="text-sm text-gray-400">You Receive</label>
+      <div class="flex gap-2 mt-2">
+        <input id="amountTo" type="number" disabled class="flex-1 p-3 rounded-xl bg-gray-800 text-white" />
+        <select id="tokenTo" class="p-3 bg-gray-800 rounded-xl"></select>
+      </div>
+    </div>
+
+    <!-- RATE -->
+    <div class="text-sm text-gray-400 mb-4" id="rateDisplay"></div>
+
+    <!-- ERROR -->
+    <div id="error" class="text-red-400 text-sm mb-4"></div>
+
+    <!-- SUBMIT -->
+    <button id="confirmBtn" class="w-full bg-green-500 py-3 rounded-xl hover:bg-green-600 transition font-semibold">
+      Confirm Swap
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
